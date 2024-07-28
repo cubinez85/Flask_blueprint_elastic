@@ -1,0 +1,83 @@
+[2024-07-27 20:34:47 +0300] [16366] [INFO] Handling signal: term
+[2024-07-27 20:34:47 +0300] [16369] [INFO] Worker exiting (pid: 16369)
+[2024-07-27 20:34:47 +0300] [16367] [INFO] Worker exiting (pid: 16367)
+[2024-07-27 20:34:47 +0300] [16368] [INFO] Worker exiting (pid: 16368)
+[2024-07-27 20:34:48 +0300] [16366] [INFO] Shutting down: Master
+[2024-07-27 20:34:49 +0300] [20169] [INFO] Starting gunicorn 22.0.0
+[2024-07-27 20:34:49 +0300] [20169] [INFO] Listening at: unix:/var/www/project_flask/ipc.sock (20169)
+[2024-07-27 20:34:49 +0300] [20169] [INFO] Using worker: sync
+[2024-07-27 20:34:49 +0300] [20170] [INFO] Booting worker with pid: 20170
+[2024-07-27 20:34:49 +0300] [20171] [INFO] Booting worker with pid: 20171
+[2024-07-27 20:34:49 +0300] [20172] [INFO] Booting worker with pid: 20172
+[2024-07-27 20:34:50,176] INFO in __init__: project_flask startup
+[2024-07-27 20:34:50,198] INFO in __init__: project_flask startup
+[2024-07-27 20:34:50,227] INFO in __init__: project_flask startup
+[2024-07-27 20:48:43 +0300] [901] [INFO] Starting gunicorn 22.0.0
+[2024-07-27 20:48:43 +0300] [901] [INFO] Listening at: unix:/var/www/project_flask/ipc.sock (901)
+[2024-07-27 20:48:43 +0300] [901] [INFO] Using worker: sync
+[2024-07-27 20:48:43 +0300] [936] [INFO] Booting worker with pid: 936
+[2024-07-27 20:48:43 +0300] [961] [INFO] Booting worker with pid: 961
+[2024-07-27 20:48:43 +0300] [972] [INFO] Booting worker with pid: 972
+[2024-07-27 20:48:44,502] INFO in __init__: project_flask startup
+[2024-07-27 20:48:44,502] INFO in __init__: project_flask startup
+[2024-07-27 20:48:44,503] INFO in __init__: project_flask startup
+[2024-07-28 10:25:24 +0300] [773] [INFO] Starting gunicorn 22.0.0
+[2024-07-28 10:25:24 +0300] [773] [INFO] Listening at: unix:/var/www/project_flask/ipc.sock (773)
+[2024-07-28 10:25:24 +0300] [773] [INFO] Using worker: sync
+[2024-07-28 10:25:24 +0300] [908] [INFO] Booting worker with pid: 908
+[2024-07-28 10:25:24 +0300] [915] [INFO] Booting worker with pid: 915
+[2024-07-28 10:25:24 +0300] [924] [INFO] Booting worker with pid: 924
+[2024-07-28 10:25:27,357] INFO in __init__: project_flask startup
+[2024-07-28 10:25:27,359] INFO in __init__: project_flask startup
+[2024-07-28 10:25:27,359] INFO in __init__: project_flask startup
+[2024-07-28 10:26:19 +0300] [773] [INFO] Handling signal: term
+[2024-07-28 10:26:19 +0300] [908] [INFO] Worker exiting (pid: 908)
+[2024-07-28 10:26:19 +0300] [915] [INFO] Worker exiting (pid: 915)
+[2024-07-28 10:26:19 +0300] [924] [INFO] Worker exiting (pid: 924)
+[2024-07-28 10:26:20 +0300] [773] [INFO] Shutting down: Master
+[2024-07-28 10:26:21 +0300] [2119] [INFO] Starting gunicorn 22.0.0
+[2024-07-28 10:26:21 +0300] [2119] [INFO] Listening at: unix:/var/www/project_flask/ipc.sock (2119)
+[2024-07-28 10:26:21 +0300] [2119] [INFO] Using worker: sync
+[2024-07-28 10:26:21 +0300] [2120] [INFO] Booting worker with pid: 2120
+[2024-07-28 10:26:21 +0300] [2121] [INFO] Booting worker with pid: 2121
+[2024-07-28 10:26:21 +0300] [2123] [INFO] Booting worker with pid: 2123
+[2024-07-28 10:26:22,130] INFO in __init__: project_flask startup
+[2024-07-28 10:26:22,185] INFO in __init__: project_flask startup
+[2024-07-28 10:26:22,293] INFO in __init__: project_flask startup
+[2024-07-28 10:47:24 +0300] [2119] [INFO] Handling signal: term
+[2024-07-28 10:47:24 +0300] [2121] [INFO] Worker exiting (pid: 2121)
+[2024-07-28 10:47:24 +0300] [2120] [INFO] Worker exiting (pid: 2120)
+[2024-07-28 10:47:24 +0300] [2123] [INFO] Worker exiting (pid: 2123)
+[2024-07-28 10:47:24 +0300] [2119] [INFO] Shutting down: Master
+[2024-07-28 10:47:26 +0300] [7242] [INFO] Starting gunicorn 22.0.0
+[2024-07-28 10:47:26 +0300] [7242] [INFO] Listening at: unix:/var/www/project_flask/ipc.sock (7242)
+[2024-07-28 10:47:26 +0300] [7242] [INFO] Using worker: sync
+[2024-07-28 10:47:26 +0300] [7243] [INFO] Booting worker with pid: 7243
+[2024-07-28 10:47:26 +0300] [7245] [INFO] Booting worker with pid: 7245
+[2024-07-28 10:47:26 +0300] [7246] [INFO] Booting worker with pid: 7246
+[2024-07-28 10:47:26,909] INFO in __init__: project_flask startup
+[2024-07-28 10:47:26,960] INFO in __init__: project_flask startup
+[2024-07-28 10:47:26,980] INFO in __init__: project_flask startup
+[2024-07-28 11:23:20 +0300] [7242] [INFO] Handling signal: term
+[2024-07-28 11:23:20 +0300] [7246] [INFO] Worker exiting (pid: 7246)
+[2024-07-28 11:23:20 +0300] [7245] [INFO] Worker exiting (pid: 7245)
+[2024-07-28 11:23:20 +0300] [7243] [INFO] Worker exiting (pid: 7243)
+[2024-07-28 11:23:21 +0300] [7242] [INFO] Shutting down: Master
+[2024-07-28 11:23:22 +0300] [15634] [INFO] Starting gunicorn 22.0.0
+[2024-07-28 11:23:22 +0300] [15634] [INFO] Listening at: unix:/var/www/project_flask/ipc.sock (15634)
+[2024-07-28 11:23:22 +0300] [15634] [INFO] Using worker: sync
+[2024-07-28 11:23:22 +0300] [15635] [INFO] Booting worker with pid: 15635
+[2024-07-28 11:23:22 +0300] [15636] [INFO] Booting worker with pid: 15636
+[2024-07-28 11:23:22 +0300] [15637] [INFO] Booting worker with pid: 15637
+[2024-07-28 11:23:23,221] INFO in __init__: project_flask startup
+[2024-07-28 11:23:23,262] INFO in __init__: project_flask startup
+[2024-07-28 11:23:23,263] INFO in __init__: project_flask startup
+[2024-07-28 12:40:42 +0300] [936] [INFO] Starting gunicorn 22.0.0
+[2024-07-28 12:40:42 +0300] [936] [INFO] Listening at: unix:/var/www/project_flask/ipc.sock (936)
+[2024-07-28 12:40:42 +0300] [936] [INFO] Using worker: sync
+[2024-07-28 12:40:42 +0300] [973] [INFO] Booting worker with pid: 973
+[2024-07-28 12:40:42 +0300] [980] [INFO] Booting worker with pid: 980
+[2024-07-28 12:40:43 +0300] [990] [INFO] Booting worker with pid: 990
+[2024-07-28 12:40:44,250] INFO in __init__: project_flask startup
+[2024-07-28 12:40:44,250] INFO in __init__: project_flask startup
+[2024-07-28 12:40:44,252] INFO in __init__: project_flask startup

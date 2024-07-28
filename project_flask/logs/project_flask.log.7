@@ -1,0 +1,121 @@
+2024-07-24 11:20:20,672 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-24 11:20:20,675 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-24 11:46:28,130 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-24 16:48:16,929 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-24 16:48:16,929 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-24 16:48:16,930 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-24 17:07:02,870 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-24 17:19:04,660 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-24 17:30:06,641 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-25 09:16:52,636 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-25 09:16:52,639 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-25 09:16:52,641 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-25 09:24:39,763 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-25 09:24:55,455 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:89]
+2024-07-25 09:38:35,897 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 16:45:33,709 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 16:45:33,709 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 16:45:33,710 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 17:19:15,999 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 17:22:08,653 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 17:39:24,535 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 17:39:24,535 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 17:39:24,537 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 18:48:45,208 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 18:48:45,208 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 18:48:45,208 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 18:51:52,178 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 18:55:23,440 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 19:13:17,197 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 19:13:17,267 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 19:13:17,317 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 19:13:43,287 ERROR: Exception on / [GET] [in /var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/var/www/project_flask/app/main/routes.py", line 44, in index
+    return render_template('index.html', title=_('Home'), form=form,
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/var/www/project_flask/app/templates/index.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+  File "/var/www/project_flask/app/templates/base.html", line 68, in top-level template code
+    {% if current_user.is_authenticated %}
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/jinja2/utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'get_tasks_in_progress'
+2024-07-25 19:17:42,318 ERROR: Exception on / [GET] [in /var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/var/www/project_flask/app/main/routes.py", line 44, in index
+    return render_template('index.html', title=_('Home'), form=form,
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/var/www/project_flask/app/templates/index.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+  File "/var/www/project_flask/app/templates/base.html", line 68, in top-level template code
+    {% if current_user.is_authenticated %}
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/jinja2/utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'get_tasks_in_progress'
+2024-07-25 19:18:49,697 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 19:18:49,697 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 19:18:49,697 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 19:21:11,970 ERROR: Exception on / [GET] [in /var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/var/www/project_flask/app/main/routes.py", line 44, in index
+    return render_template('index.html', title=_('Home'), form=form,
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/var/www/project_flask/app/templates/index.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+  File "/var/www/project_flask/app/templates/base.html", line 68, in top-level template code
+    {% if current_user.is_authenticated %}
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/jinja2/utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'get_tasks_in_progress'

@@ -1,0 +1,113 @@
+2024-07-25 19:23:59,622 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 19:39:10,243 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 19:39:10,266 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 19:39:10,346 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 19:51:33,341 ERROR: Exception on /export_posts [GET] [in /var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/var/www/project_flask/app/main/routes.py", line 250, in export_posts
+    current_user.launch_task('export_posts', _('Exporting posts...'))
+  File "/var/www/project_flask/app/models.py", line 188, in launch_task
+    rq_job = current_app.task_queue.enqueue(f'app.tasks.{name}', self.id,
+NameError: name 'current_app' is not defined
+2024-07-25 20:08:05,212 ERROR: Exception on /export_posts [GET] [in /var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/var/www/project_flask/app/main/routes.py", line 250, in export_posts
+    current_user.launch_task('export_posts', _('Exporting posts...'))
+  File "/var/www/project_flask/app/models.py", line 188, in launch_task
+    rq_job = current_app.task_queue.enqueue(f'app.tasks.{name}', self.id,
+NameError: name 'current_app' is not defined
+2024-07-25 20:13:54,041 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 20:31:31,560 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 20:31:31,671 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 20:31:31,724 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 20:31:47,678 ERROR: Exception on /export_posts [GET] [in /var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/var/www/project_flask/app/main/routes.py", line 250, in export_posts
+    current_user.launch_task('export_posts', _('Exporting posts...'))
+  File "/var/www/project_flask/app/models.py", line 188, in launch_task
+    rq_job = current_app.task_queue.enqueue(f'app.tasks.{name}', self.id,
+NameError: name 'current_app' is not defined
+2024-07-25 20:38:22,177 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 20:38:22,208 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 20:38:22,283 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 20:38:27,716 INFO: project_flask startup [in /var/www/project_flask/./app/__init__.py:94]
+2024-07-25 20:39:04,080 INFO: project_flask startup [in /var/www/project_flask/./app/__init__.py:94]
+2024-07-25 20:39:55,181 INFO: project_flask startup [in /var/www/project_flask/./app/__init__.py:94]
+2024-07-25 20:41:37,418 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 20:48:09,325 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 20:48:25,209 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 20:48:25,218 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 20:48:25,238 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-25 20:48:50,439 INFO: project_flask startup [in /var/www/project_flask/./app/__init__.py:94]
+2024-07-26 08:47:43,135 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 08:47:43,135 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 08:47:43,135 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 08:53:42,871 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 08:54:03,286 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 08:54:03,360 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 08:54:03,442 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 08:58:58,235 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 08:59:24,581 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 08:59:24,595 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 08:59:24,609 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 09:02:26,256 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 09:02:37,071 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 09:02:37,208 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 09:02:37,216 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 09:47:10,209 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 09:47:24,627 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 09:47:24,746 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 09:47:24,845 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 09:59:06,268 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 09:59:06,270 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 09:59:06,273 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:03:28,477 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:03:28,478 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:03:28,478 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:04:26,341 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:04:26,342 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:04:26,342 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:17:12,379 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:17:12,379 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:17:12,381 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:23:04,591 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:23:04,627 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:23:04,675 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:24:22,695 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:24:22,763 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 10:24:22,861 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 12:54:33,793 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 12:54:33,793 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 12:54:33,793 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 12:56:27,592 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 12:56:27,737 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]

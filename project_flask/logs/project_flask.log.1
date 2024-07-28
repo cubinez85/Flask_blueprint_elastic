@@ -1,0 +1,130 @@
+2024-07-26 18:53:02,798 ERROR: Exception on /notifications [GET] [in /var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/mysql/connector/connection_cext.py", line 697, in cmd_query
+    self._cmysql.query(
+_mysql_connector.MySQLInterfaceError: Table 'testdb.user' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/mysql/connector/cursor_cext.py", line 372, in execute
+    result = self._cnx.cmd_query(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/mysql/connector/opentelemetry/context_propagation.py", line 102, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/mysql/connector/connection_cext.py", line 705, in cmd_query
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'testdb.user' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 878, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 1253, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "/var/www/project_flask/app/main/routes.py", line 16, in before_request
+    if current_user.is_authenticated:
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/werkzeug/local.py", line 526, in _get_current_object
+    return get_name(local())
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask_login/utils.py", line 25, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask_login/utils.py", line 370, in _get_user
+    current_app.login_manager._load_user()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask_login/login_manager.py", line 364, in _load_user
+    user = self._user_callback(user_id)
+  File "/var/www/project_flask/app/models.py", line 101, in load_user
+    return db.session.get(User, int(id))
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 1060, in get
+    return self._proxied.get(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3682, in get
+    return self._get_impl(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3862, in _get_impl
+    return db_load_fn(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/orm/loading.py", line 694, in load_on_pk_identity
+    session.execute(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2351, in execute
+    return self._execute_internal(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2236, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/mysql/connector/cursor_cext.py", line 372, in execute
+    result = self._cnx.cmd_query(
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/mysql/connector/opentelemetry/context_propagation.py", line 102, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/mysql/connector/connection_cext.py", line 705, in cmd_query
+    raise get_mysql_exception(
+sqlalchemy.exc.ProgrammingError: (mysql.connector.errors.ProgrammingError) 1146 (42S02): Table 'testdb.user' doesn't exist
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen, user.last_message_read_time AS user_last_message_read_time 
+FROM user 
+WHERE user.id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-07-26 18:53:21,279 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 18:53:29,649 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 18:53:51,512 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 18:54:27,578 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 18:54:27,618 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 18:54:27,703 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 19:09:21,456 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 19:09:34,355 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:94]
+2024-07-26 19:37:28,930 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:91]
+2024-07-26 19:37:29,006 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:91]
+2024-07-26 19:37:29,020 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:91]
+2024-07-26 19:37:52,446 ERROR: Exception on /auth/login [GET] [in /var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/var/www/project_flask/app/auth/routes.py", line 30, in login
+    return render_template('auth/login.html', title=_('Sign In'), form=form)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/var/www/project_flask/app/templates/auth/login.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/var/www/project_flask/venv/lib/python3.10/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/var/www/project_flask/app/templates/base.html", line 138, in template
+    {% endif %}
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2024-07-26 19:45:20,908 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:91]
+2024-07-26 19:45:20,996 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:91]
+2024-07-26 19:45:21,069 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:91]
+2024-07-26 19:59:43,564 INFO: project_flask startup [in /var/www/project_flask/app/__init__.py:91]
